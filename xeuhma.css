@@ -1,0 +1,366 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent; /* Removes the grey highlight on clickable elements on iOS */
+    -webkit-text-size-adjust: 100%; /* Prevent adjustments of font size after orientation changes in iOS */
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+/* Fonts */
+@font-face {
+    font-family: 'open-sans';
+    src: url(Fonts/OpenSans-Light.ttf) format('truetype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'open-sans';
+    src: url(Fonts/OpenSans-Regular.ttf) format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'open-sans';
+    src: url(Fonts/OpenSans-Bold.ttf) format('truetype');
+    font-weight: bold;
+}
+
+/* Fonts Use */
+
+a {
+    text-decoration: none;
+    color: #263238;
+}
+
+ul {
+    list-style: none;
+}
+
+h1, p, li {
+    color: #263238;
+}
+
+
+/* ------- Container ------- */
+.container {
+    display: grid;
+    grid-template-columns: minmax(24px,1fr) minmax(0px,960px) minmax(24px,1fr);
+    grid-template-rows: repeat(4 auto);
+}
+
+/* ------- Header ------- */
+.header {
+    /* Layout */
+    grid-column: 2;
+    grid-row: 1;
+
+    /* Inner layout */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 64px 40px;
+    margin-top: 40px;
+}
+
+@media (min-width: 520px) {
+    .header {
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto;
+        margin-top: 40px;
+        margin-bottom: 8px;
+        gap: 16px;
+    }
+  }
+
+.logo {
+    display: grid;
+    justify-content: start;
+}
+
+.logo h1{
+    font-family: open-sans;
+    font-weight: bold;
+    letter-spacing: -2px;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.nav {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (min-width: 380px) {
+    .nav {
+        justify-content: start;
+        grid-gap: 32px;
+    }
+  }
+
+@media (min-width: 520px) {
+    .nav {
+        justify-content: end;
+        grid-gap: 32px;
+    }
+  }
+
+.nav-title {
+    font-family: open-sans;
+    color: #263238;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+    top: 3px;
+}
+
+.nav-title a:hover{
+    color: #0336FF;
+}
+
+/* ------- Cover Image ------- */
+.cover-image {
+    /* Layout */
+    grid-column-start: 1;
+    grid-column-end: end;
+    grid-row: 2;
+    margin-top: 24px;
+}
+
+.project-image {
+    padding-top: 100%;
+    position: relative;
+}
+
+@media (min-width: 380px) {
+    .project-image {
+        padding-top: 80%;
+        position: relative;
+    }
+  }
+
+@media (min-width: 520px) {
+    .project-image {
+        padding-top: 60%;
+        position: relative;
+    }
+  }
+
+@media (min-width: 720px) {
+    .project-image {
+        padding-top: 41.875%;
+        position: relative;
+    }
+  }
+
+.project-image-content {
+    /* Layout */
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    /* Appearence */
+    object-fit: cover;
+}
+
+/* ------- Main ------- */
+.main {
+    /* Layout */
+    grid-column: 2;
+    grid-row: 3;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 96px;
+}
+
+/* Title & text */
+.title {
+    font-family: open-sans;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 40px;
+    margin-bottom: 32px;
+}
+
+.subtitle {
+    font-family: open-sans;
+    color: #546E7A;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+}
+
+.text {
+    font-family: open-sans;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 26px;
+    width: 100%;
+}
+
+@media (min-width: 520px) {
+    .text {
+        width: 64%;
+    }
+}
+
+/* Project-definition */
+.project-definition {
+    /* Layout */
+    grid-row: 1;
+
+    /* Inner layout */
+    margin-top: 32px;
+}
+
+/* Content */
+.content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+}
+
+/* Image */
+.desktop-image {
+    margin-top: 64px;
+    padding-top: 66.7%;
+    position: relative;
+    justify-content: center;
+}
+
+.mobile-image {
+    padding-top: 177.8%;
+    position: relative;
+}
+
+.square-image {
+    padding-top: 131.2%;
+    position: relative;
+}
+
+.color-font-image {
+    padding-top: 22.5%;
+    position: relative;
+}
+
+.arbo-image-family {
+    padding-top: 32.26%;
+    position: relative;
+}
+
+.arbo-image-pro {
+    padding-top: 37.99%;
+    position: relative;
+    margin-top: 32px;
+}
+
+.arbo-image-request {
+    padding-top: 29.55%;
+    position: relative;
+    margin-top: 32px;
+}
+
+.wireframe-image {
+    padding-top: 60.8%;
+    position: relative;
+}
+
+/* Image content */
+.flat-image-content {
+    /* Layout */
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    /* Appearence */
+    object-fit: cover;
+}
+
+.shadow-image-content {
+    /* Layout */
+    position: absolute;
+    top: 0;
+    width: 64%;
+
+    /* Appearence */
+    object-fit: cover;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1)
+}
+
+
+/* Mobile-view */
+.mobile-view {
+    /* Layout */
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+}
+
+@media (min-width: 520px) {
+    .mobile-view {
+        grid-template-columns: 1fr 1fr 1fr;
+        position: relative;
+    }
+  }
+
+/* ------- Footer ------- */
+.footer {
+    /* Layout */
+    grid-column: 2;
+    grid-row: 4;
+    margin-top: 96px;
+    margin-bottom: 136px;
+
+    /* Appearence */
+    border-top: 1px solid #dde4e7;
+    
+    /* Inner layout */
+    display: grid;
+    padding-top: 40px;
+    grid-row-gap: 24px;
+    grid-column-gap: 40px;
+}
+
+@media (min-width: 758px) {
+    .footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+@media (min-width: 1008px) {
+    .footer {
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    }
+  }
+
+.footer_title {
+    margin-bottom: 16px;
+}
+
+.footer_title {
+    font-family: open-sans;
+    color: #0336FF;
+    font-weight: bold;
+    font-size: 11px;
+    line-height: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.footer li {
+    font-family: open-sans;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+}
