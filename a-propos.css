@@ -39,7 +39,7 @@ ul {
     list-style: none;
 }
 
-h1, p, li {
+h1, h2, p, li {
     color: #263238;
 }
 
@@ -48,10 +48,11 @@ h1 {
     font-weight: 300;
     font-size: 24px;
     line-height: 30px;
+    margin-top: 32px;
     margin-bottom: 16px;
 }
 
-p {
+p, li {
     font-family: open-sans;
     font-weight: 300;
     font-size: 16px;
@@ -179,10 +180,29 @@ p {
     }
 }
 
-.text-content{
-    margin-bottom: 32px;
+.skills-tools {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
+@media (min-width: 568px) {
+    .skills-tools {
+        width: 536px;
+        justify-self: center; 
+    }
+}
+
+
+.subtitle {
+    font-family: open-sans;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 32px;
+    margin-bottom: 16px;
+}
 
 /* ------- Footer ------- */
 .footer {

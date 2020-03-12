@@ -39,7 +39,7 @@ ul {
     list-style: none;
 }
 
-h1, p, li {
+h1, h2, p, li {
     color: #263238;
 }
 
@@ -191,7 +191,6 @@ h1, p, li {
 
 .subtitle {
     font-family: open-sans;
-    color: #37474F;
     font-weight: bold;
     font-size: 12px;
     line-height: 16px;
