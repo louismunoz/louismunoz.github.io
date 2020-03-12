@@ -137,12 +137,14 @@ p {
     /* Inner layout */
     display: grid;
     grid-template-columns: 100%;
-    margin-top: 136px;
-    margin-bottom: 96px;
+    margin-top: 80px;
+    margin-bottom: 80px;
 }
 
 @media (min-width: 720px) {
     .landing {
+        margin-top: 136px;
+        margin-bottom: 96px;
         grid-template-columns: 64%;
     }
 }
@@ -150,8 +152,10 @@ p {
 .slogan {
     font-family: open-sans;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 16px;
+    letter-spacing: 1px;
     line-height: 24px;
+    margin-bottom: 16px;
 }
  
 .intro {

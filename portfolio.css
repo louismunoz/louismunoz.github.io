@@ -124,7 +124,7 @@ h1, p, li {
     color: #0336FF;
 }
 
-/* ------- Wrapper ------- */
+/* ------- Main ------- */
 .main {
     /* Layout */
     grid-column: 2;
@@ -142,7 +142,7 @@ h1, p, li {
 
 @media (min-width: 520px) {
     .project {
-        width: 72%;
+        width: 64%;
     }
 }
 
@@ -162,16 +162,11 @@ h1, p, li {
 }
 
 .project-name strong {
-    font-weight: 600;
+    font-weight: bold;
     text-transform: uppercase;
 }
 
-@media (min-width: 720px) {
-    .project-name {
-        font-size: 40px;
-        line-height: 52px;
-    }
-}
+
 
 .project h2:hover {
     color: #0336FF;
