@@ -141,11 +141,11 @@ p {
     margin-bottom: 80px;
 }
 
-@media (min-width: 720px) {
+@media (min-width: 790px) {
     .landing {
         margin-top: 128px;
-        margin-bottom: 128px;
-        grid-template-columns: 64%;
+        margin-bottom: 96px;
+        grid-template-columns: 616px;
     }
 }
 
@@ -157,10 +157,18 @@ p {
     line-height: 24px;
     margin-bottom: 8px;
 }
- 
+
+
 .intro {
-    font-size: 32px;
-    line-height: 44px;
+    font-size: 33px;
+    line-height: 42px;
+}
+
+@media (min-width: 350px) {
+    .intro {
+        font-size: 42px;
+        line-height: 52px;
+    }
 }
 
 /* ------- Projects ------- */
@@ -172,7 +180,7 @@ p {
     /* Inner layout */
     display: grid;
     grid-template-columns: 1fr;
-    gap: 96px;
+    gap: 64px;
 }
 
 .project {
@@ -189,7 +197,7 @@ p {
 }
 
 .project-image {
-    padding-top: 100%;
+    padding-top: 85.34%;
     position: relative;
     overflow: hidden;
 }
@@ -276,7 +284,7 @@ p {
     /* Layout */
     grid-column: 2;
     grid-row: 4;
-    margin-top: 96px;
+    margin-top: 64px;
     margin-bottom: 128px;
 
     /* Appearence */
