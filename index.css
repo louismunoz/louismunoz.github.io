@@ -180,7 +180,7 @@ p {
     /* Inner layout */
     display: grid;
     grid-template-columns: 1fr;
-    gap: 64px;
+    gap: 96px;
 }
 
 .project {
@@ -284,7 +284,7 @@ p {
     /* Layout */
     grid-column: 2;
     grid-row: 4;
-    margin-top: 64px;
+    margin-top: 96px;
     margin-bottom: 128px;
 
     /* Appearence */
