@@ -257,22 +257,29 @@ p {
     position: relative;
 }
 
-.arbo-image-family {
-    padding-top: 32.26%;
+.arbo-search-family {
+    padding-top: 36.56%;
     position: relative;
 }
 
-.arbo-image-pro {
-    padding-top: 37.99%;
+.arbo-family-account {
+    padding-top: 52.85%;
     position: relative;
     margin-top: 32px;
 }
 
-.arbo-image-request {
-    padding-top: 29.55%;
+.arbo-home-pro {
+    padding-top: 29.91%;
     position: relative;
     margin-top: 32px;
 }
+
+.arbo-pro-account {
+    padding-top: 38.05%;
+    position: relative;
+    margin-top: 32px;
+}
+
 
 .wireframes-image {
     padding-top: 66.63%;
