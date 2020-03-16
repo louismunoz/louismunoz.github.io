@@ -144,7 +144,7 @@ p {
 @media (min-width: 790px) {
     .landing {
         margin-top: 128px;
-        margin-bottom: 96px;
+        margin-bottom: 128px;
         grid-template-columns: 616px;
     }
 }
