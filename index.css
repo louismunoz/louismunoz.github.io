@@ -139,6 +139,12 @@ p {
     margin-bottom: 80px;
 }
 
+@media (min-width: 688px) {
+    .landing {
+        grid-template-columns: 640px;
+    }
+}
+
 @media (min-width: 790px) {
     .landing {
         margin-top: 128px;
@@ -162,7 +168,7 @@ p {
     line-height: 42px;
 }
 
-@media (min-width: 350px) {
+@media (min-width: 380px) {
     .intro {
         font-size: 42px;
         line-height: 52px;
@@ -283,7 +289,7 @@ p {
     grid-column: 2;
     grid-row: 4;
     margin-top: 96px;
-    margin-bottom: 128px;
+    margin-bottom: 96px;
 
     /* Appearence */
     border-top: 1px solid #dde4e7;
