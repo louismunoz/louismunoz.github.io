@@ -250,11 +250,6 @@ p {
     position: relative;
 }
 
-.color-font-image {
-    padding-top: 22.5%;
-    position: relative;
-}
-
 .arbo-search-family {
     padding-top: 36.56%;
     position: relative;
@@ -339,6 +334,15 @@ p {
     .square-view {
         grid-template-columns: 1fr 1fr 1fr;
     }
+}
+
+/* Color-view */ 
+.color-view {
+    /* Layout */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 640px;
+    gap: 32px;
 }
 
 /* ------- Footer ------- */
