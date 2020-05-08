@@ -1,4 +1,4 @@
-/* Reset */
+/* ======= Reset ======= */
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +7,7 @@
     -webkit-text-size-adjust: 100%; /* Prevent adjustments of font size after orientation changes in iOS */
   }
 
-/* Fonts */
+/* ======= Fonts ======= */
 @font-face {
     font-family: 'open-sans';
     src: url(public/fonts/OpenSans-Light.ttf) format('truetype');
@@ -16,18 +16,11 @@
 
 @font-face {
     font-family: 'open-sans';
-    src: url(public/fonts/OpenSans-Regular.ttf) format('truetype');
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: 'open-sans';
     src: url(public/fonts/OpenSans-Bold.ttf) format('truetype');
     font-weight: bold;
 }
 
-/* Fonts Use */
-
+/* ======= Fonts Use ======= */
 a {
     text-decoration: none;
     color: #263238;
@@ -39,42 +32,37 @@ ul {
 
 h1, p, li {
     color: #263238;
-}
-
-p {
     font-family: open-sans;
     font-weight: 300;
 }
 
-/* ------- Container ------- */
+/* ======= Container =======*/
 .container {
     display: grid;
-    grid-template-columns: minmax(24px,1fr) minmax(0px,960px) minmax(24px,1fr);
-    grid-template-rows: auto auto auto auto;
+    grid-template-columns: minmax(24px,1fr) minmax(0px,1032px) minmax(24px,1fr);
 }
 
-/* ------- Header ------- */
+/* ======= Header ======= */
 .header {
     /* Layout */
     grid-column: 2;
-    grid-row: 1;
 
     /* Inner layout */
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 64px 40px;
-    margin-top: 40px;
+    margin-top: 32px;
 }
 
-@media (min-width: 520px) {
+@media (min-width: 600px) {
     .header {
         grid-template-columns: auto 1fr;
         grid-template-rows: auto;
-        margin-top: 40px;
+        margin-top: 48px;
         margin-bottom: 8px;
         gap: 16px;
     }
-  }
+}
 
 .logo {
     display: grid;
@@ -83,10 +71,17 @@ p {
 
 .logo h1{
     font-family: open-sans;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: -1px;
+}
+
+.logo strong {
+    font-family: open-sans;
+    font-size: 32px;
     font-weight: bold;
-    letter-spacing: -2px;
-    font-size: 24px;
-    line-height: 32px;
+    color: #2979FF;
 }
 
 .nav {
@@ -99,38 +94,45 @@ p {
 @media (min-width: 380px) {
     .nav {
         justify-content: start;
-        grid-gap: 32px;
+        grid-gap: 16px;
     }
-  }
+}
 
-@media (min-width: 520px) {
+@media (min-width: 600px) {
     .nav {
         justify-content: end;
-        grid-gap: 32px;
+        grid-gap: 16px;
     }
-  }
+}
 
 .nav-title {
     font-family: open-sans;
-    color: #263238;
     font-weight: bold;
     font-size: 12px;
     line-height: 16px;
     letter-spacing: 2px;
     text-transform: uppercase;
+    color: #263238;
     position: relative;
     top: 3px;
 }
 
 .nav-title a:hover{
-    color: #0336FF;
+    color: #2979FF;
 }
 
-/* ------- Landing ------- */
+.border {
+    width: 1px;
+    height: 18px;
+    background-color: #dde4e7;
+    position: relative;
+    top: 3px;
+}
+
+/* ======= Landing ======= */
 .landing {
     /* Layout */
     grid-column: 2;
-    grid-row: 2;
 
     /* Inner layout */
     display: grid;
@@ -156,15 +158,15 @@ p {
 .slogan {
     font-family: open-sans;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 18px;
+    line-height: 28px;
     letter-spacing: 1px;
-    line-height: 24px;
-    margin-bottom: 8px;
+    color: #2979FF;
+    margin-bottom: 4px;
 }
 
-
 .intro {
-    font-size: 33px;
+    font-size: 32px;
     line-height: 42px;
 }
 
@@ -175,25 +177,25 @@ p {
     }
 }
 
-/* ------- Projects ------- */
+/* ======= Projects ======= */
 .projects {
     /* Layout */
     grid-column: 2;
-    grid-row: 3;
 
     /* Inner layout */
     display: grid;
     grid-template-columns: 1fr;
-    gap: 96px;
+    gap: 48px;
 }
 
+/* ======= Project ======= */
 .project {
     display: grid;
     grid-template-columns: 1fr;
     gap: 32px;
 }
 
-@media (min-width: 720px) {
+@media (min-width: 904px) {
     .project {
         grid-template-columns: 1fr minmax(0px, 344px);
         gap: 64px;
@@ -201,9 +203,8 @@ p {
 }
 
 .project-image {
-    padding-top: 85.34%;
+    padding-top: 58.9%;
     position: relative;
-    overflow: hidden;
 }
 
 .image {
@@ -223,7 +224,7 @@ p {
     gap: 32px;
 }
 
-@media (min-width: 720px) {
+@media (min-width: 904px) {
     .project-description {
         align-self: center;
     }
@@ -231,10 +232,10 @@ p {
 
 .title {
     font-family: open-sans;
-    color: #263238;
     font-weight: 300;
     font-size: 36px;
     line-height: 40px;
+    color: #263238;
     margin-bottom: 16px;
 }
 
@@ -244,92 +245,94 @@ p {
 }
 
 .link {
-    justify-self: start;
-    padding: 15px 22px;
-    border: 2px solid  #0336FF;
     font-family: open-sans;
-    color: #0336FF;
     font-weight: bold;
-    font-size: 11px;
-    line-height: 14px;
+    font-size: 12px;
+    line-height: 16px;
     letter-spacing: 2px;
     text-transform: uppercase;
+    color: #2979FF;
+    justify-self: start;
+    padding: 13px 22px;
+    border: 2px solid  #2979FF;
 }
 
 .link:hover {
+    background-color: #2979FF;
     color: #FFFFFF;
-    background-color: #0336FF;
 }
 
-.project-two {
+.content-divider {
+    height: 1px;
+    width: 100%;
+    background-color: #dde4e7;
+}
+
+
+.project-alt {
     display: grid;
     grid-template-columns: 1fr;
     gap: 32px;
 }
 
-@media (min-width: 720px) {
-    .project-two {
+@media (min-width: 904px) {
+    .project-alt {
         grid-template-columns: minmax(0px, 344px) 1fr;
         gap: 64px;
     }
-    .image-two {
+    .image-alt {
         grid-column: 2;
         grid-row: 1;
     }
-    .description-two {
+    .description-alt {
         grid-column: 1;
         grid-row: 1;
     }
 }
 
-
-/* ------- Footer ------- */
+/* ======= Footer ======= */
 .footer {
     /* Layout */
     grid-column: 2;
-    grid-row: 4;
     margin-top: 96px;
-    margin-bottom: 96px;
+    margin-bottom: 128px;
 
     /* Appearence */
     border-top: 1px solid #dde4e7;
     
     /* Inner layout */
     display: grid;
-    padding-top: 40px;
     grid-row-gap: 24px;
     grid-column-gap: 40px;
+    padding-top: 48px;
 }
 
 @media (min-width: 758px) {
     .footer {
         grid-template-columns: repeat(2, 1fr);
     }
-  }
+}
 
 @media (min-width: 1008px) {
     .footer {
         grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
     }
-  }
-
-.footer_title {
-    margin-bottom: 16px;
 }
 
 .footer_title {
     font-family: open-sans;
-    color: #0336FF;
     font-weight: bold;
-    font-size: 11px;
-    line-height: 14px;
+    font-size: 12px;
+    line-height: 16px;
     letter-spacing: 1px;
     text-transform: uppercase;
+    color: #2979FF;
+    margin-bottom: 16px;
 }
 
 .footer li {
     font-family: open-sans;
-    font-weight: normal;
+    font-weight: 300;
     font-size: 14px;
-    line-height: 20px;
+    line-height: 22px;
 }
