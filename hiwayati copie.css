@@ -212,8 +212,7 @@ p {
 /* ======= Project ======= */
 .project {
     /* Layout */
-    grid-column-start: 1;
-    grid-column-end: end;
+    grid-column: 2;
 
     /* Inner layout */
     display: grid;
@@ -221,29 +220,15 @@ p {
     grid-row-gap: 64px;
 }
 
-@media (min-width: 780px) {
-    .project {
-        grid-column: 2;
-    }
-}
 /* ======= Content ======= */
 .content {
     /* Layout */
-    grid-column: 1;
-    margin-left: 24px;
-    margin-right: 24px;
+    grid-column: 2;
 
     /* Inner layout */
     display: grid;
     grid-template-columns: minmax(0px,672px);
     justify-self: center;
-}
-
-@media (min-width: 720px) {
-    .content {
-        margin-left: 0px;
-        margin-right: 0px;
-    }
 }
 
 .text {
@@ -252,6 +237,7 @@ p {
 
 /* ======= Project scope ======= */
 .project-scope {
+    grid-column: 1;
     display: grid;
     grid-template-columns: 1fr;
     gap: 16px;
@@ -276,16 +262,13 @@ p {
 
 /* ======= Mobile Image ======= */
 .mobile {
-    /* Layout */
-    grid-column-start: 1;
-    grid-column-end: end;
-
     /* Inner layout */
+    grid-column: 2;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 16px;
     background-color: #f7F7F7;
-    padding: 24px;
+    padding: 16px;
 }
 
 @media (min-width: 580px) {
@@ -297,12 +280,9 @@ p {
 
 @media (min-width: 960px) {
     .mobile {
-        padding: 64px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .mobile {
+        grid-column: 2;
+        grid-row-gap: 64px;
+        grid-column-gap: 96px;
         padding: 64px 96px;
     }
 }
@@ -312,43 +292,12 @@ p {
     position: relative;
 }
 
-/* ======= Desktop Image ======= */
-.desktop {
-    grid-column-start: 1;
-    grid-column-end: end;
-    background-color: #f7F7F7;
-    padding: 24px;
-}
-
-@media (min-width: 580px) {
-    .desktop {
-        padding: 32px;
-    }
-}
-
-@media (min-width: 960px) {
-    .desktop {
-        padding: 64px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .desktop {
-        padding: 64px 96px;
-    }
-}
-
-.large-desktop-image {
-    padding-top: 126.6%;
-    position: relative;
-}
-
-.desktop-image {
-    padding-top: 62.49%;
-    position: relative;
-}
-
 /* ======= Image ======= */
+.image {
+    padding-top: 66.67%;
+    position: relative;
+}
+
 .image-content {
     /* Layout */
     position: absolute;
@@ -358,8 +307,8 @@ p {
 
     /* Appearence */
     object-fit: cover;
-    border-radius: 2px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
+    border-radius: 4px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.16);
 }
 
 .image-content-alt {
@@ -373,19 +322,98 @@ p {
     object-fit: cover;
 }
 
+/* ======= Personas ======= */
+.persona {
+    /* Inner layout */
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+}
+
+@media (min-width: 720px) {
+    .persona {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-color: #f7F7F7;
+        gap: 32px;
+        padding: 32px;
+    }
+}
+
+@media (min-width: 960px) {
+    .persona {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        background-color: #f7F7F7;
+    }
+}
+
+.persona-item {
+    background-color: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    padding: 24px;
+}
+
+.dot {
+    height: 4px;
+    width: 32px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.one {
+    background-color: #FFC22C;
+}
+
+.two {
+    background-color: #0072CE;
+}
+
+.three {
+    background-color: #37474F;
+}
+
+.persona-title {
+    font-family: lato;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 26px;
+    color: #222222;
+}
+
+.persona-subtitle {
+    font-family: lato;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: #222222;
+}
+
+.persona-text {
+    margin-top: 16px;
+    font-family: lato;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+}
+
 /* ======= Colors & Typos ======= */
 .palette {
     display: grid;
     grid-template-columns: 80px 80px 80px;
     column-gap: 16px;
     row-gap: 32px;
-    margin-top: 32px;
 }
 
-@media (min-width: 580px) {
+@media (min-width: 360px) {
     .palette {
-        grid-template-columns: 96px 96px 96px;
-        gap: 32px;
+        column-gap: 32px;
     }
 }
 
@@ -394,25 +422,13 @@ p {
     height: 64px;
     border-radius: 50px;
     margin-bottom: 8px;
-}
-
-.one {
-    background-color: #010101;
-}
-
-.two {
-    background-color: #F7F9F9;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .typo {
     grid-column-start: 1;
     grid-column-end: 4;
-}
-
-@media (min-width: 600px) {
-    .typo {
-    grid-column: 4;
-    }
 }
 
 /* ======= Footer ======= */
